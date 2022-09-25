@@ -143,15 +143,14 @@ h1,h2,h3,ul,p{
 
     background-color: var(--accent-color);
 
-    /*opacity: 0;*/
     transform: scaleX(0);
     transition: transform var(--transition-duration) var(--timing-function);
 
 }
 
-.header-item:hover::after{
-    /*opacity: 1;*/
+.header-item:active::after{
     transform: scaleX(1);
+    
 }
 
 
@@ -968,6 +967,7 @@ h1,h2,h3,ul,p{
 
     transition: opacity var(--transition-duration) var(--timing-function);
 
+    z-index: 1;
 }
 
 .backdrop.is-hidden{
