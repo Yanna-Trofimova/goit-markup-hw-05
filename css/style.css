@@ -136,6 +136,8 @@ h1,h2,h3,ul,p{
     text-decoration: none;
 
     position: relative;
+
+    transition: color var(--transition-duration) var(--timing-function);
 }
 
 
@@ -153,16 +155,13 @@ h1,h2,h3,ul,p{
 
     background-color: var(--accent-color);
 
-    transform: scaleX(0);
+    transform: scaleX(1);
     transition: transform var(--transition-duration) var(--timing-function),
     background-color var(--transition-duration) var(--timing-function);
 
 }
 
- .header-item.current:hover::after{
-    transform: scaleX(1);
- }
-
+ 
 
 .header-item:hover,
 .header-item:focus{
@@ -1081,3 +1080,7 @@ h1,h2,h3,ul,p{
 
     fill: currentColor;
 }
+
+
+
+
