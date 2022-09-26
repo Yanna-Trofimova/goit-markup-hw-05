@@ -139,7 +139,7 @@ h1,h2,h3,ul,p{
 }
 
 
-.header-item .current{
+ .header-item.current::after{
     content: "";
     display: block;
     position: absolute;
@@ -154,16 +154,14 @@ h1,h2,h3,ul,p{
     background-color: var(--accent-color);
 
     transform: scaleX(0);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function),
+    background-color var(--transition-duration) var(--timing-function);
 
 }
 
-.header-item:active .current{
+ .header-item.current:hover::after{
     transform: scaleX(1);
-
-    
-    
-}
+ }
 
 
 .header-item:hover,
@@ -554,7 +552,8 @@ h1,h2,h3,ul,p{
     color: #AFB1B8;
 
     transform: scale(1);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function),
+    background-color var(--transition-duration) var(--timing-function) ,color var(--transition-duration) var(--timing-function);
 }
 
 
@@ -624,7 +623,7 @@ h1,h2,h3,ul,p{
     color: #AFB1B8;
 
     transform: scale(1);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function), background-color var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function);
     
 }
 
@@ -719,7 +718,7 @@ h1,h2,h3,ul,p{
     margin-bottom: 9px;
 
     transform: scale(1);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function),color var(--transition-duration) var(--timing-function);
 }
 
 .footer-address:hover,
@@ -792,7 +791,7 @@ h1,h2,h3,ul,p{
     color: #FFF;
 
     transform: scale(1);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function), background-color var(--transition-duration) var(--timing-function);
 }
 
 
@@ -817,7 +816,7 @@ h1,h2,h3,ul,p{
     text-decoration: none;
     
     transform: scale(1);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function);
 }
 
 .communication:hover,
@@ -881,7 +880,7 @@ h1,h2,h3,ul,p{
 
 .portfolio-item{
     transform: scale(1);
-    transition: transform var(--transition-duration) var(--timing-function);
+    transition: transform var(--transition-duration) var(--timing-function), box-shadow var(--transition-duration) var(--timing-function), border-radius var(--transition-duration) var(--timing-function);
 }
 
 .portfolio-item:hover,
